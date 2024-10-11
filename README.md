@@ -1,1 +1,2 @@
-# Cannabis_EGS
+# Cannabis Environmental Genomic Selection
+
