@@ -18,19 +18,19 @@ Inputs needed to start
    This script was used on the filtered vcf file in PyCharm to identify a core (in this case n=25, change accordingly for 30% of your dataset)
    *You will need to edit accordingly. 44/82 samples in this work had georeferences and this script subsets to these.
    
-3. Convert vcf to format for rrBLUP (2_vcf_to_rrBLUP.py)
+2. Convert vcf to format for rrBLUP (2_vcf_to_rrBLUP.py)
    In terminal locally with the below command structure:
    python vcf_to_rrBLUP.py -i Cannabis_sativa_PRJNA734114_filtered.vcf.gz -o Ren_PRJNA734114_rrBLUP_format
-
-4. Extract relevant climate data from WorldClim with lat/long
+   *may need edits if your vcf structure is different 
+3. Extract relevant climate data from WorldClim with lat/long
    In R studio with the script 3_WorldClim_data_extraction.R
 
-5. Cross validation for climate variable prediction accuracy
+4. Cross validation for climate variable prediction accuracy
    In R studio with the script Cannabis_cross_validation_2.R (Cross_validation.R). Requires import of xval_kfol_functions.R (Credit: Quinn Campbell)
    
-6. Genomic selection with rrBLUP
+5. Genomic selection with rrBLUP
    In R studio with the script 5_Genomic_Selection.R
-   *may need edits if your vcf structure is different 
+   
  
 
    Figures for the manuscript can be found in scripts under Cannabis_EGS_Figures_manuscript.R 
