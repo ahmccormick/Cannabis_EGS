@@ -13,8 +13,7 @@ Scripts used for .vcf generation are located in the scripts/vcf folder
 Scripts used for EGS are located in the scripts/EGS folder
 
 Inputs needed to start
-.vcf file with your genotype information
-lat/long data for your samples in a .csv
+.vcf file with your genotype information and lat/long data for your samples in a .csv
 
 1. Identification of core (1_step1_core.py)
    This script was used on the filtered vcf file in PyCharm to identify a core (in this case n=25, change accordingly for 30% of your dataset)
