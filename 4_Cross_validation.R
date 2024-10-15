@@ -64,9 +64,116 @@ cat("Dimensions of g.in:", dim(g.in), "\n")
 cat("Dimensions of y.in.mat:", dim(y.in.mat), "\n")
 cat("Dimensions of y.trainset.mat:", dim(y.trainset.mat), "\n")
 
-### Run k-fold Cross-validation for RR-BLUP ###
+# RR-BLUP ###
 # k.xval function from external script, running 10-fold cross-validation with 50 repetitions
 xval_k10_rrblup <- k.xval(g.in = g.in, y.in = y.in.mat, y.trainset = y.trainset.mat, k.fold = 10, reps = 50)
-
-# Save the cross-validation results
 saveRDS(xval_k10_rrblup, "xval_rrblup_kfold_10.RData")
+
+# Gaussian Kernel
+K <- A.mat(g.in) #Compute relationship matrix using Gaussian Kernel
+k_dist <- dist(K) #Calculate distance matrix from relationship matrix
+
+#Run k-fold cross-validation for Gaussian Kernel
+xval_k10_GAUSS <- k.xval.GAUSS(g.in = g.in, y.in = y.in, y.trainset = y.trainset, k_dist = k_dist, k.fold = 10, reps = 50)
+saveRDS(xval_k10_GAUSS, "xval_GAUSS_kfold_10.RData")
+
+#Exponential Kernel
+#Compute relationship matrix using Exponential Kernel
+K.Exp=Kernel_computation(X=g.in, name="exponential", degree=NULL, nL=NULL)
+
+#Set row and column names for the Exponential Kernel matrix
+row.names(K.Exp) <- rownames(g.in)
+colnames(K.Exp) <- rownames(g.in)
+
+#Calculate distance matrix from Exponential Kernel relationship matrix
+exp_dist <- dist(K.Exp) # Calculate Relationship Matrix\
+
+#Run k-fold cross-validation for Exponential Kernel
+xval_k10_EXP <- k.xval.EXP(g.in = g.in, y.in = y.in, y.trainset = y.trainset, k_dist = exp_dist, k.fold = 10, reps = 50)
+saveRDS(xval_k10_EXP, "xval_EXP_kfold_10.RData")
+
+#BayesCPi
+#Run k-fold cross-validation for BayesCPi model
+xval_k10_BayesCpi <- k.xval.BayesCpi(g.in = g.in, y.in = y.in, y.trainset = y.trainset, k.fold = 10, reps = 50, niter=3000,nburn=1200)
+saveRDS(xval_k10_BayesCpi, "xval_BayesCpi_kfold_10.RData")
+
+
+#####
+#PLOTS
+#####
+library(ggplot2)
+setwd("~/R/cannabis_GEAV/cross_validation/")
+
+# RR-BLUP - K-Fold Cross-Validation
+#Load cross-validation results for rrBLUP
+rrblup_kfold10 <- readRDS("xval_rrblup_kfold_10.RData")
+rrblup_kfold10 <- rrblup_kfold10$xval.result
+rrblup_kfold10$r.mean <- as.numeric(rrblup_kfold10$r.mean)
+
+# Gaussian Kernel - K-fold
+#Load cross-validation results for Gaussian Kernel
+gauss_kfold_10 <- readRDS('xval_GAUSS_kfold_10.RData')
+gauss_kfold_10 <- gauss_kfold_10$xval.result
+gauss_kfold_10$r.mean <- as.numeric(gauss_kfold_10$r.mean)
+
+# Exponential Kernel - K-fold
+#Load cross-validation results for Exponential Kernel
+EXP_kfold_10 <- readRDS('xval_EXP_kfold_10.RData')
+EXP_kfold_10 <- EXP_kfold_10$xval.result
+EXP_kfold_10$r.mean <- as.numeric(EXP_kfold_10$r.mean)
+
+# BayesCpi - K-fold
+#Load cross-validation results for BayesCpi model
+#bayescpi_kfold_10 <- readRDS('xval_BayesCpi_kfold_10.RData')
+#bayescpi_kfold_10 <- bayescpi_kfold_10$xval.result
+#bayescpi_kfold_10$r.mean <- as.numeric(bayescpi_kfold_10$r.mean)
+
+
+# Organize all dataframes for merging
+## Rename model names
+rrblup_kfold10$model <- "rrBLUP"
+gauss_kfold_10$model <- "Gaussian Kernel"
+EXP_kfold_10$model <- "Exponential Kernel"
+bayescpi_kfold_10$model <- "BayesCpi"
+
+## Input xval type
+rrblup_kfold10$xval <- "Ten-Fold"
+gauss_kfold_10$xval <- "Ten-Fold"
+EXP_kfold_10$xval <- "Ten-Fold"
+bayescpi_kfold_10$xval <- "Ten-Fold"
+
+
+#Combine all model results into a single list
+model_list <- list(rrblup_kfold10, gauss_kfold_10, EXP_kfold_10,bayescpi_kfold_10)
+
+#Remove any NA values from the model results
+model_list1 <- lapply(model_list, na.omit)
+
+#Combine all models into a single dataframe
+all_models <- do.call("rbind", model_list1)
+
+#Convert standard deviation values to numeric
+all_models$r.sd <- as.numeric(all_models$r.sd)
+
+#Ensure cross-validation type is a factor with specified levels
+all_models$xval <- factor(all_models$xval, levels = c("Ten-Fold"))
+
+#Filter for specific traits of interest
+all_bio <- all_models[all_models$trait %in% c('bio_01', 'bio_02', 'bio_03', 'bio_04', 'bio_05','bio_06',
+                                              'bio_07','bio_08','bio_09','bio_010','bio_11',
+                                              'bio_12','bio_13','bio_14','bio_15','bio_16','bio_17','bio_18','bio_19'),]
+
+#Plot 
+all_bio$trait <- factor(all_bio$trait, levels = paste0("bio", 1:19))
+
+ggplot(all_models, aes(y = r.mean, x = model, color = model)) +
+  theme_bw() +
+  geom_errorbar(aes(x = model, ymin = r.mean-r.sd, ymax = r.mean + r.sd), width = 0.3, position = position_dodge(0.2)) +
+  geom_point(size = 3) +
+  facet_wrap(vars(trait), scales = "free_x", nrow = 1) + 
+  geom_hline(yintercept = 0.5, color="red", size = 1.5, linetype = "longdash") +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1, size = 10),
+        axis.text.y = element_text(size = 15)) +
+  ylim(0, 1)
+
+
