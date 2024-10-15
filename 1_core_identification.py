@@ -1,5 +1,5 @@
 ########################################
-# Step 1: Import libraries and read the VCF file
+# Step 1
 ########################################
 import allel
 import numpy as np
