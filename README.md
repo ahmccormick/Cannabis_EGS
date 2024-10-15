@@ -32,6 +32,6 @@ Inputs needed to start
    In R studio with the script 5_Genomic_Selection.R
  
 
-   Figures for the manuscript can be found in scripts/EGS_Figures/Cannabis_EGS_Figures_manuscript.R 
+   Figures for the manuscript can be found in scripts under Cannabis_EGS_Figures_manuscript.R 
 
 
