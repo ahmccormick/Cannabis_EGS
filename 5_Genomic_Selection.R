@@ -6,7 +6,7 @@ library(dplyr)
 
 # Load genotype and environmental data
 gd1 <- read.delim("~/R/cannabis_GEAV/Inputs/Ren_PRJNA734114_rrBLUP_clean.txt", sep = "\t", header = TRUE)
-envdat <- read.csv('~/R/cannabis_GEAV/Outputs/ren_n44_extracted_climate_data_core_n25.csv', head = TRUE)
+envdat <- read.csv('~/R/cannabis_GEAV/Outputs/ren_n44_extracted_climate_data_core_n25_greedy.csv', head = TRUE)
 
 # Set row names for genotype data (use 'rs.' column which contains SNP IDs)
 row.names(gd1) <- gd1$rs.
