@@ -26,7 +26,7 @@ Inputs needed to start
    In R studio with the script 3_WorldClim_data_extraction.R
 
 4. Cross validation for climate variable prediction accuracy
-   In R studio with the script Cannabis_cross_validation_2.R (Cross_validation.R)
+   In R studio with the script Cannabis_cross_validation_2.R (Cross_validation.R). Requires import of xval_kfol_functions.R (Credit: Quinn Campbell)
    
 6. Genomic selection with rrBLUP
    In R studio with the script 5_Genomic_Selection.R
