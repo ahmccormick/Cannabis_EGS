@@ -111,7 +111,7 @@ for (t in 1:length(traits)) {
 
 # Final output: GEBVs for all individuals
 row.names(gebv_df) <- row.names(g.in)
-write.csv(gebv_df, '~/R/cannabis_GEAV/Outputs/rrblup_GEBV_values_cannabis.csv')
+write.csv(gebv_df, '~/R/cannabis_GEAV/Outputs/rrblup_GEBV_values_cannabis_greedy.csv')
 
 
 
