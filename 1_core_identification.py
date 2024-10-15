@@ -1,6 +1,6 @@
 ########################################
-#Step 1
-#########################################
+# Step 1: Import libraries and read the VCF file
+########################################
 import allel
 import numpy as np
 import pandas as pd
@@ -42,9 +42,31 @@ genotypes_subset = genotypes[:, subset_idx]
 # Step 3: Compute genetic distance matrix
 dist_matrix = pairwise_distances(genotypes_subset.T, metric='hamming')
 
-# Step 4: Sampling core collection from the subset
-# Use only the indices from the subset for sampling
-core_indices = np.random.choice(np.arange(len(subset_idx)), size=25, replace=False)
+
+########################################
+# Step 4: Greedy sampling for maximum diversity
+########################################
+def greedy_core_selection(dist_matrix, num_samples):
+    # Start by randomly selecting the first sample
+    selected_indices = [np.random.choice(range(dist_matrix.shape[0]))]
+
+    # Iteratively select samples that maximize distance from the selected set
+    while len(selected_indices) < num_samples:
+        remaining_indices = list(set(range(dist_matrix.shape[0])) - set(selected_indices))
+        # For each remaining sample, calculate its minimum distance to the selected samples
+        min_distances = np.min(dist_matrix[remaining_indices][:, selected_indices], axis=1)
+        # Select the sample with the maximum of these minimum distances
+        next_sample = remaining_indices[np.argmax(min_distances)]
+        selected_indices.append(next_sample)
+
+    return selected_indices
+
+
+# Set the number of individuals to select (e.g., 25)
+num_core_samples = 25
+
+# Use the greedy algorithm to select core individuals
+core_indices = greedy_core_selection(dist_matrix, num_core_samples)
 
 # Map the core indices back to the SRR sample names
 core_sample = [subset_ids[i] for i in core_indices]
@@ -56,4 +78,4 @@ for sample in core_sample:
 
 # Save the core sample (SRR names) to CSV
 core_sample_data = pd.DataFrame(core_sample, columns=['Sample_ID'])
-core_sample_data.to_csv("/Users/annamccormick/R/cannabis_GEAV/Outputs/cannabis_core_n25_2.csv", index=False)
+core_sample_data.to_csv("/Users/annamccormick/R/cannabis_GEAV/Outputs/cannabis_core_n25_greedy.csv", index=False)
