@@ -7,10 +7,10 @@ A pre-print of this work can be found at (to follow shortly)
 High resolution verions of main and supplemental figures will be available on fig share https://figshare.com/authors/Anna_H_McCormick/17741367
 
 # VCF Pipeline
-Scripts used for .vcf generation are located in the scripts/vcf folder
+Scripts used for .vcf generation are located in the scripts folder
 
 # EGS Pipeline 
-Scripts used for EGS are located in the scripts/EGS folder
+Scripts used for EGS are located in the scripts folder
 
 Inputs needed to start
 .vcf file with your genotype information and lat/long data for your samples in a .csv
