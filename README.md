@@ -15,8 +15,8 @@ Inputs needed to start
 .vcf file with your genotype information and lat/long data for your samples in a .csv
 
 1. Identification of core (1_core_identification.py)
-   This script was used on the filtered vcf file in PyCharm to identify a core (in this case n=25, change accordingly for 30% of your dataset)
-   *You will need to edit accordingly. 44/82 samples in this work had georeferences and this script subsets to these.
+   This script was used on the filtered vcf file in PyCharm to identify a core (change accordingly for 30% of your dataset)
+   *You will need to edit this to your samples which have georeferences.
    
 2. Convert vcf to format for rrBLUP (2_vcf_to_rrBLUP.py)
    In terminal locally with the below command structure:
