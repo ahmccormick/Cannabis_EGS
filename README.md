@@ -11,12 +11,11 @@ Scripts used for .vcf generation are located in the Scripts folder
 
 # EGS Pipeline 
 
-Inputs needed to start
-.vcf file with your genotype information and lat/long data for your samples in a .csv
+Inputs needed: .vcf file with your genotype information and lat/long data for your samples in a .csv
 
 1. Identification of core (1_core_identification.py)
    This script was used on the filtered vcf file in PyCharm to identify a core (change accordingly for 30% of your dataset)
-   *You will need to edit this to your samples which have georeferences. Alternatively if your .vcf is small an alternative is available in R and can be found in the Cannabis_EGS_Figures_manuscript.R file
+   *You will need to edit this to your samples which have georeferences. If your .vcf is small an alternative is available in R and can be found in the Cannabis_EGS_Figures_manuscript.R file
    
 2. Convert vcf to format for rrBLUP (2_vcf_to_rrBLUP.py)
    In terminal locally with the below command structure:
@@ -27,7 +26,7 @@ Inputs needed to start
    In R studio with the script 3_WorldClim_data_extraction.R
 
 4. Cross validation for climate variable prediction accuracy
-   In R studio with the script 4_Cross_validation.R. Requires import of xval_kfol_functions.R (Credit: Quinn Campbell)
+   In R studio with the script 4_Cross_validation.R. If dataset is large recommend HPC compute. Requires import of xval_kfol_functions.R (Credit: Quinn Campbell)
    
 5. Genomic selection with rrBLUP
    In R studio with the script 5_Genomic_Selection.R
