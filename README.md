@@ -14,7 +14,7 @@ Scripts used for .vcf generation are located in the Scripts folder
 Inputs needed: .vcf file with your genotype information and lat/long data for your samples in a .csv
 
 1. Identification of core (1_core_identification.py)
-   This script was used on the filtered vcf file in PyCharm to identify a core (change accordingly for 30% of your dataset)
+   This script was used on the generated vcf file (Cannabis_sativa_PRJNA734114_filtered.vcf.gz) in PyCharm to identify a core (change accordingly for 30% of your dataset)
    *You will need to edit this to your samples which have georeferences. If your .vcf is small an alternative is available in R and can be found in the Cannabis_EGS_Figures_manuscript.R file
    
 2. Convert vcf to format for rrBLUP (2_vcf_to_rrBLUP.py)
