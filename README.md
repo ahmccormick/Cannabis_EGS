@@ -1,8 +1,8 @@
 # Cannabis Environmental Genomic Selection
 
-This repository provides the supporting data for a recently submitted manuscript entitled "X"
+This repository provides the supporting data for a recently submitted manuscript entitled "Dissecting Genotype-Environment interactions with functional implications for parental selection in Cannabis Breeding"
 
-A pre-print of this work can be found at (to follow shortly)
+A pre-print of this work can be found at: (to follow shortly)
 
 High resolution verions of main and supplemental figures will be available on fig share https://figshare.com/authors/Anna_H_McCormick/17741367
 
