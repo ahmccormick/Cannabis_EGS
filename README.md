@@ -25,7 +25,7 @@ Inputs needed: .vcf file with your genotype information and lat/long data for yo
 3. Extract relevant climate data from WorldClim with lat/long
    In R studio with the script 3_WorldClim_data_extraction.R
 
-4. Cross validation for climate variable prediction accuracy
+4. Examining different models for climate variable prediction accuracy
    In R studio with the script 4_Cross_validation.R. If dataset is large recommend HPC compute. Requires import of xval_kfol_functions.R (Credit: Quinn Campbell)
    
 5. Genomic selection with rrBLUP
