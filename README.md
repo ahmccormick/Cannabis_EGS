@@ -33,6 +33,6 @@ Inputs needed: .vcf file with your genotype information and lat/long data for yo
    
  
 
-   Figures for the manuscript can be found in scripts under Cannabis_EGS_Figures_manuscript.R 
+   Figures for the manuscript can be found in the Data folder under Cannabis_EGS_Figures_manuscript.R 
 
 
