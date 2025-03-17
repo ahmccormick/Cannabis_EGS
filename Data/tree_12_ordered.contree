@@ -1,0 +1,252 @@
+#NEXUS
+begin taxa;
+	dimensions ntax=150;
+	taxlabels
+	Humulus_lupulus
+	SRR14708197_Chamaeleon_hemp_type
+	SRR14708198_GXI_drug_type_feral
+	SRR14708199_GXI_drug_type_feral
+	SRR14708200_Carmagnola_hemp_type
+	SRR14708201_SCN_drug_type_feral
+	SRR14708202_QHI_basal
+	SRR14708203_IMA_basal
+	SRR14708204_XUM2_basal
+	SRR14708205_XUM1_basal
+	SRR14708206_XBL2_basal
+	SRR14708207_XBL1_basal
+	SRR14708208_XGL2_basal
+	SRR14708209_XGL1_basal
+	SRR14708210_XHC2_basal
+	SRR14708211_Santhica_27_hemp_type
+	SRR14708212_XHC1_basal
+	SRR14708213_VIR_449_Szegedi_9_hemp_type
+	SRR14708214_Colombian_8_drug_type
+	SRR14708215_PEU_drug_type
+	SRR14708216_Wild_Thailand_drug_type
+	SRR14708217_VIR_223_Bernburgskaya_Odnodomnaya_bm_hemp_type
+	SRR14708218_R3in134_basal
+	SRR14708219_R3in134_basal
+	SRR14708220_R3in134_basal
+	SRR14708221_R2in135_hemp_type
+	SRR14708222_Fedora_17_hemp_type
+	SRR14708223_R2in135_hemp_type
+	SRR14708224_R2in135_hemp_type
+	SRR14708225_R1in136_hemp_type
+	SRR14708226_R1in136_hemp_type
+	SRR14708227_R1in136_hemp_type
+	SRR14708228_IBE_drug_type_feral
+	SRR14708229_VIR_507_Krasnodarsky_10_FB_hemp_type
+	SRR14708230_VIR_493_Glukhovskaja_10_Zheltostebel_naja_hemp_type
+	SRR14708231_VIR_369_hemp_type
+	SRR14708232_VIR_201_hemp_type
+	SRR14708233_Ferimon_12_hemp_type
+	SRR14708234_VIR_37_Novgorod_Seversky_cv_hemp_type
+	SRR14708235_R3in134_basal
+	SRR14708236_R2in135_hemp_type
+	SRR14708237_R1in136_hemp_type
+	SRR14708238_VIR_483_hemp_type
+	SRR14708239_VIR_483_hemp_type
+	SRR14708240_VIR_483_hemp_type
+	SRR14708241_VIR_469_hemp_type
+	SRR14708242_VIR_469_hemp_type
+	SRR14708243_VIR_469_hemp_type
+	SRR14708244_Bialobrzeskie_hemp_type
+	SRR14708245_PCL2_drug_type_feral
+	SRR14708246_PCL1_drug_type_feral
+	SRR14708247_PID2_drug_type_feral
+	SRR14708248_PID1_drug_type_feral
+	SRR14708249_IBR3_drug_type_feral
+	SRR14708250_IBR2_drug_type_feral
+	SRR14708251_IBR1_drug_type_feral
+	SRR14708252_IUL3_drug_type_feral
+	SRR14708253_IUL2_drug_type_feral
+	SRR14708254_IUL1_drug_type_feral
+	SRR14708255_B52_drug_type
+	SRR14708256_IUP3_drug_type_feral
+	SRR14708257_IUP2_drug_type_feral
+	SRR14708258_IUP1_drug_type_feral
+	SRR14708259_Juso14_hemp_type
+	SRR14708260_PP9_drug_type
+	SRR14708261_Hindu_Kush_drug_type
+	SRR14708262_Hawaii_Maui_Waui_drug_type
+	SRR14708263_Mexican_Sativa_drug_type
+	SRR14708264_Haze_drug_type
+	SRR14708265_Northern_Light_drug_type
+	SRR14708266_Alpine_Rocket_drug_type
+	SRR14708267_Ruderalis_Indica_drug_type
+	SRR14708268_Top_44_drug_type
+	SRR14708269_Big_Skunk_drug_type
+	SRR14708270_Big_Bud_drug_type
+	SRR14708271_Swaziland_drug_type
+	SRR14708272_Delta_llosa_hemp_type
+	SRR14708273_Tiborszallasi_hemp_type
+	SRR14708274_Carmagnola_hemp_type
+	SRR14708275_Beniko_hemp_type
+	SRR14708276_Fibranova_hemp_type
+	SRR14708277_Kompolti_hemp_type
+	SRR14708278_Uniko_B_hemp_type
+	SRR9089225_Bsh_01_F_Population_1
+	SRR9089228_Ban_01_M_Population_2
+	SRR9089229_Ban_01_F_Population_2
+	SRR9089230_Saad_01_F_Population_1
+	SRR9089231_Saad_01_M_Population_2
+	SRR9089232_Sam_01_F_Population_2
+	SRR9089233_Sam_01_M_Population_2
+	SRR9089234_Sam_02_F_Population_2
+	SRR9089235_Sam_02_M_Population_2
+	SRR9089236_San_01_F_Population_1
+	SRR9089237_San_01_M_Population_1
+	SRR9089238_Rmhz_01_F_Population_2
+	SRR9089239_Rmhz_01_M_Population_2
+	SRR9089253_Krsh_01_F_Population_1
+	SRR9089254_Krsh_01_M_Population_1
+	SRR9089255_Mal_01_F_Population_1
+	SRR9089256_Mal_01_M_Population_1
+	SRR9089257_Mahl_01_F_Population_1
+	SRR9089258_Mahl_01_M_Population_1
+	SRR9089259_Nhv_01_F_Population_2
+	SRR9089260_Nhv_01_M_Population_2
+	SRR9089261_Mshd_01_F_Population_1
+	SRR9089262_Mshd_01_M_Population_1
+	SRR9089263_Nrz_01_M_Population_1
+	SRR9089264_Nrz_01_F_Population_1
+	SRR9089265_Pir_01_M_Population_1
+	SRR9089266_Pir_01_F_Population_1
+	SRR9089267_Qom_01_M_Population_1
+	SRR9089268_Qom_01_F_Population_1
+	SRR9089269_Qzv_02_M_Population_1
+	SRR9089270_Qzv_02_F_Population_1
+	SRR9089271_Rash_01_M_Population_1
+	SRR9089272_Rash_01_F_Population_1
+	SRR9089275_Dez_02_F_Population_1
+	SRR9089276_Dez_02_M_Population_1
+	SRR9089277_Dshm_01_F_Population_1
+	SRR9089278_Dshm_01_M_Population_1
+	SRR9089281_Dez_01_F_Population_1
+	SRR9089282_Dez_01_M_Population_1
+	SRR9089283_Shrz_01_F_Population_1
+	SRR9089284_Shrz_01_M_Population_1
+	SRR9089285_Sav_01_F_Population_1
+	SRR9089286_Sav_01_M_Population_1
+	SRR9089287_Zah_01_F_Population_1
+	SRR9089288_Zah_01_M_Population_1
+	SRR9089289_Urm_01_F_Population_1
+	SRR9089290_Urm_01_M_Population_1
+	SRR9089291_San_02_F_Population_2
+	SRR9089292_San_02_M_Population_1
+	SRR9089293_Gonb_01_F_Population_2
+	SRR9089294_Gahv_01_M_Population_2
+	SRR9089295_Gahv_01_F_Population_2
+	SRR9089296_Frs_01_M_Population_1
+	SRR9089297_Krmn_01_M_Population_1
+	SRR9089298_Krmn_01_F_Population_1
+	SRR9089299_Kash_01_M_Population_1
+	SRR9089300_Gonb_01_M_Population_2
+	SRR9089301_Frs_01_F_Population_1
+	SRR9089302_Esf_01_F_Population_1
+	SRR9089303_Bam_01_F_Population_1
+	SRR9089304_Bam_01_M_Population_1
+	SRR9089305_Ark_01_F_Population_2
+	SRR9089306_Ark_01_M_Population_2
+	SRR9089308_Ard_01_F_Population_1
+	SRR9089309_Abh_01_M_Population_1
+	SRR9089310_Afg_01_F_Population_1
+	SRR9089317_Bsh_01_M_Population_1
+;
+end;
+
+begin trees;
+	tree tree_1 = [&R] (((((((((SRR9089225_Bsh_01_F_Population_1:0.192025,(SRR9089271_Rash_01_M_Population_1:0.160329,SRR9089317_Bsh_01_M_Population_1:0.151856)[&label=89]:0.027547):0.014516,(SRR9089283_Shrz_01_F_Population_1:0.173126,SRR9089296_Frs_01_M_Population_1:0.157158)[&label=52]:0.036345)[&label=33]:0.015515,((SRR9089237_San_01_M_Population_1:0.164255,SRR9089309_Abh_01_M_Population_1:0.158619)[&label=94]:0.033772,(SRR9089275_Dez_02_F_Population_1:0.204731,(SRR9089298_Krmn_01_F_Population_1:0.185716,SRR9089303_Bam_01_F_Population_1:0.171779)[&label=69]:0.026357)[&label=39]:0.016191)[&label=35]:0.009928)[&label=43,!cartoon={10,0.0}]:0.009773,(((((SRR9089258_Mahl_01_M_Population_1:0.185048,SRR9089277_Dshm_01_F_Population_1:0.192771)[&label=67]:0.025485,(SRR9089276_Dez_02_M_Population_1:0.174498,SRR9089292_San_02_M_Population_1:0.171179)[&label=98]:0.03639)[&label=52]:0.014454,((SRR9089282_Dez_01_M_Population_1:0.172417,SRR9089299_Kash_01_M_Population_1:0.167538)[&label=68]:0.033351,((SRR9089253_Krsh_01_F_Population_1:0.16268,SRR9089257_Mahl_01_F_Population_1:0.166947)[&label=93]:0.035171,(SRR9089285_Sav_01_F_Population_1:0.168037,SRR9089286_Sav_01_M_Population_1:0.15722)[&label=92]:0.034218)[&label=43]:0.011176)[&label=48]:0.010376)[&label=81]:0.012985,(((SRR9089278_Dshm_01_M_Population_1:0.185588,(SRR9089289_Urm_01_F_Population_1:0.118713,SRR9089290_Urm_01_M_Population_1:0.124554)[&label=100]:0.045606)[&label=27]:0.020454,((SRR9089261_Mshd_01_F_Population_1:0.171329,SRR9089270_Qzv_02_F_Population_1:0.179138)[&label=42]:0.03536,(SRR9089262_Mshd_01_M_Population_1:0.174777,SRR9089310_Afg_01_F_Population_1:0.144962)[&label=39]:0.023787)[&label=17]:0.013985)[&label=63]:0.014239,(((SRR9089230_Saad_01_F_Population_1:0.169876,SRR9089302_Esf_01_F_Population_1:0.142966)[&label=58]:0.024772,(SRR9089254_Krsh_01_M_Population_1:0.166371,SRR9089267_Qom_01_M_Population_1:0.158396)[&label=73]:0.025985)[&label=65]:0.019663,(((SRR9089265_Pir_01_M_Population_1:0.142676,SRR9089266_Pir_01_F_Population_1:0.131537)[&label=100]:0.060223,(SRR9089297_Krmn_01_M_Population_1:0.163434,SRR9089304_Bam_01_M_Population_1:0.153608)[&label=90]:0.029755)[&label=74]:0.018646,((SRR9089256_Mal_01_M_Population_1:0.162683,SRR9089268_Qom_01_F_Population_1:0.165724)[&label=79]:0.032787,((SRR9089269_Qzv_02_M_Population_1:0.166041,SRR9089284_Shrz_01_M_Population_1:0.156301)[&label=95]:0.034653,(SRR9089281_Dez_01_F_Population_1:0.178914,(SRR9089236_San_01_F_Population_1:0.160481,SRR9089272_Rash_01_F_Population_1:0.157469)[&label=72]:0.023747)[&label=77]:0.016226)[&label=56]:0.011812)[&label=67]:0.010759)[&label=52]:0.009282)[&label=62]:0.011043)[&label=72]:0.008449)[&label=86,!cartoon={32,0.0}]:0.011888,(((SRR9089294_Gahv_01_M_Population_2:0.100196,SRR9089295_Gahv_01_F_Population_2:0.103725)[&label=100]:0.103665,(((SRR9089234_Sam_02_F_Population_2:0.15681,SRR9089235_Sam_02_M_Population_2:0.148445)[&label=98]:0.035551,(SRR9089259_Nhv_01_F_Population_2:0.161896,SRR9089260_Nhv_01_M_Population_2:0.152657)[&label=97]:0.034029)[&label=41]:0.012992,(((SRR9089238_Rmhz_01_F_Population_2:0.146457,SRR9089239_Rmhz_01_M_Population_2:0.148702)[&label=99]:0.040806,(SRR9089231_Saad_01_M_Population_2:0.156943,(SRR9089305_Ark_01_F_Population_2:0.104365,SRR9089306_Ark_01_M_Population_2:0.115991)[&label=100]:0.052335)[&label=91]:0.022721)[&label=31]:0.014284,((SRR9089291_San_02_F_Population_2:0.185814,SRR9089293_Gonb_01_F_Population_2:0.145803)[&label=92]:0.02955,((SRR9089232_Sam_01_F_Population_2:0.143481,SRR9089233_Sam_01_M_Population_2:0.128967)[&label=100]:0.049787,(SRR9089300_Gonb_01_M_Population_2:0.144676,(SRR9089228_Ban_01_M_Population_2:0.134695,SRR9089229_Ban_01_F_Population_2:0.134745)[&label=100]:0.051703)[&label=99]:0.030461)[&label=76]:0.014552)[&label=48]:0.012434)[&label=71]:0.016913)[&label=75]:0.019723)[&label=100,!cartoon={18,0.0}]:0.036905,(((SRR14708263_Mexican_Sativa_drug_type:0.052497,SRR14708267_Ruderalis_Indica_drug_type:0.10157)[&label=100]:0.031295,((SRR14708215_PEU_drug_type:0.046933,(SRR14708264_Haze_drug_type:0.003344,SRR14708271_Swaziland_drug_type:0.002069)[&label=100]:0.043392)[&label=100]:0.049277,((SRR14708262_Hawaii_Maui_Waui_drug_type:0.035552,SRR14708265_Northern_Light_drug_type:0.049943)[&label=98]:0.022453,((SRR14708216_Wild_Thailand_drug_type:0.024249,SRR14708270_Big_Bud_drug_type:0.078417)[&label=100]:0.043217,((SRR14708269_Big_Skunk_drug_type:0.040841,(SRR14708255_B52_drug_type:6.23E-4,SRR14708266_Alpine_Rocket_drug_type:0.001263)[&label=100]:0.05323)[&label=49]:0.008272,(SRR14708214_Colombian_8_drug_type:0.029018,(SRR14708261_Hindu_Kush_drug_type:0.039401,(SRR14708260_PP9_drug_type:0.024365,SRR14708268_Top_44_drug_type:0.00946)[&label=89]:0.010597)[&label=99]:0.023153)[&label=79]:0.016806)[&label=98]:0.027186)[&label=100]:0.030763)[&label=100]:0.033447)[&label=69]:0.015346)[&label=100,!cartoon={16,0.0}]:0.019706,((((SRR14708198_GXI_drug_type_feral:0.082959,SRR14708199_GXI_drug_type_feral:0.055567)[&label=78]:0.019256,(SRR14708201_SCN_drug_type_feral:0.06838,(SRR9089308_Ard_01_F_Population_1:0.140861,SRR14708203_IMA_basal:0.063726)[&label=100]:0.035775)[&label=67]:0.013531)[&label=87]:0.016004,(((SRR14708245_PCL2_drug_type_feral:0.02556,SRR14708246_PCL1_drug_type_feral:0.029794)[&label=100]:0.092475,(SRR14708247_PID2_drug_type_feral:0.06398,SRR14708248_PID1_drug_type_feral:0.050675)[&label=99]:0.022479)[&label=86]:0.021377,((SRR14708254_IUL1_drug_type_feral:0.047236,(SRR14708252_IUL3_drug_type_feral:2.0E-6,SRR14708253_IUL2_drug_type_feral:3.26E-4)[&label=100]:0.040108)[&label=99]:0.018821,((SRR14708251_IBR1_drug_type_feral:0.028906,(SRR14708249_IBR3_drug_type_feral:2.0E-6,SRR14708250_IBR2_drug_type_feral:2.0E-6)[&label=100]:0.016036)[&label=100]:0.034191,(SRR14708228_IBE_drug_type_feral:0.071543,(SRR14708258_IUP1_drug_type_feral:0.019034,(SRR14708256_IUP3_drug_type_feral:0.019863,SRR14708257_IUP2_drug_type_feral:0.011786)[&label=100]:0.01356)[&label=100]:0.085481)[&label=86]:0.021999)[&label=100]:0.060345)[&label=68]:0.017608)[&label=100]:0.017758)[&label=85,!cartoon={19,0.0}]:0.013789,((SRR14708202_QHI_basal:0.072016,(SRR14708218_R3in134_basal:0.071798,(SRR14708219_R3in134_basal:0.037208,(SRR14708220_R3in134_basal:0.024637,SRR14708235_R3in134_basal:0.063613)[&label=100]:0.036963)[&label=100]:0.033764)[&label=100]:0.041484)[&label=100,!cartoon={5,0.0}]:0.024552,((SRR14708210_XHC2_basal:0.068267,((SRR14708205_XUM1_basal:0.060755,(SRR14708206_XBL2_basal:0.073593,SRR14708207_XBL1_basal:0.072195)[&label=93]:0.021667)[&label=76]:0.020805,(SRR14708209_XGL1_basal:0.056055,(SRR14708208_XGL2_basal:0.062126,(SRR14708204_XUM2_basal:0.059888,SRR14708212_XHC1_basal:0.056689)[&label=98]:0.01684)[&label=83]:0.01666)[&label=71]:0.020935)[&label=89]:0.016685)[&label=98,!cartoon={8,0.0}]:0.017637,(SRR14708224_R2in135_hemp_type:0.066468,(SRR14708236_R2in135_hemp_type:0.066821,((SRR14708221_R2in135_hemp_type:0.059969,SRR14708223_R2in135_hemp_type:0.046117)[&label=82]:0.016905,(((SRR14708200_Carmagnola_hemp_type:0.045581,SRR14708276_Fibranova_hemp_type:0.057452)[&label=100]:0.044095,((SRR14708197_Chamaeleon_hemp_type:0.063928,SRR14708273_Tiborszallasi_hemp_type:0.050047)[&label=81]:0.020225,(SRR14708277_Kompolti_hemp_type:0.048313,(SRR14708274_Carmagnola_hemp_type:0.066675,SRR14708278_Uniko_B_hemp_type:0.030463)[&label=100]:0.02415)[&label=86]:0.019446)[&label=53]:0.015699)[&label=99]:0.022778,((SRR14708230_VIR_493_Glukhovskaja_10_Zheltostebel_naja_hemp_type:0.04731,(SRR14708239_VIR_483_hemp_type:0.037788,(SRR14708238_VIR_483_hemp_type:0.031109,SRR14708240_VIR_483_hemp_type:0.021455)[&label=62]:0.021253)[&label=100]:0.043814)[&label=100]:0.039914,((SRR14708242_VIR_469_hemp_type:0.0565,(SRR14708241_VIR_469_hemp_type:0.005384,SRR14708243_VIR_469_hemp_type:0.006722)[&label=100]:0.065969)[&label=99]:0.027633,((SRR14708232_VIR_201_hemp_type:0.046684,SRR14708234_VIR_37_Novgorod_Seversky_cv_hemp_type:0.066838)[&label=99]:0.020609,(SRR14708231_VIR_369_hemp_type:0.06226,(SRR14708213_VIR_449_Szegedi_9_hemp_type:0.054888,(SRR14708229_VIR_507_Krasnodarsky_10_FB_hemp_type:0.051971,(SRR14708272_Delta_llosa_hemp_type:0.097734,(SRR14708217_VIR_223_Bernburgskaya_Odnodomnaya_bm_hemp_type:0.059981,((SRR14708222_Fedora_17_hemp_type:0.043742,(SRR14708233_Ferimon_12_hemp_type:0.0388,(SRR14708244_Bialobrzeskie_hemp_type:0.04254,(SRR14708211_Santhica_27_hemp_type:0.044424,SRR14708275_Beniko_hemp_type:0.036559)[&label=100]:0.023747)[&label=91]:0.013131)[&label=74]:0.011996)[&label=60]:0.013057,((SRR14708225_R1in136_hemp_type:0.038495,SRR14708226_R1in136_hemp_type:0.037633)[&label=91]:0.017696,(SRR14708259_Juso14_hemp_type:0.028969,(SRR14708227_R1in136_hemp_type:0.022396,SRR14708237_R1in136_hemp_type:0.021809)[&label=87]:0.016631)[&label=75]:0.016044)[&label=100]:0.065257)[&label=60]:0.01147)[&label=85]:0.016285)[&label=91]:0.014655)[&label=86]:0.01339)[&label=98]:0.015926)[&label=61]:0.012276)[&label=56]:0.010758)[&label=70]:0.013094)[&label=72]:0.01702)[&label=100]:0.022548)[&label=58]:0.012491)[&label=99]:0.018779)[&label=94,!cartoon={35,0.0}]:0.017593)[&label=94]:0.019993)[&label=98]:0.02744)[&label=100]:0.019287)[&label=100]:0.018272)[&label=99]:0.016606)[&label=59]:0.008735)[&label=58]:0.017548,(SRR9089255_Mal_01_F_Population_1:0.184306,(SRR9089263_Nrz_01_M_Population_1:0.101785,SRR9089264_Nrz_01_F_Population_1:0.127574)[&label=100]:0.075497)[&label=84,!cartoon={3,0.0}]:0.0181)[&label=80]:0.024085,SRR9089287_Zah_01_F_Population_1:0.179354)[&label=84]:0.027637,SRR9089288_Zah_01_M_Population_1:0.153562)[&label=48]:0.025149,SRR9089301_Frs_01_F_Population_1:0.158025)[&label=53]:0.0,Humulus_lupulus:10.0)[&label="Root"];
+end;
+
+begin figtree;
+	set appearance.backgroundColorAttribute="Default";
+	set appearance.backgroundColour=#ffffff;
+	set appearance.branchColorAttribute="User selection";
+	set appearance.branchColorGradient=false;
+	set appearance.branchLineWidth=1.0;
+	set appearance.branchMinLineWidth=0.0;
+	set appearance.branchWidthAttribute="Fixed";
+	set appearance.foregroundColour=#000000;
+	set appearance.hilightingGradient=false;
+	set appearance.selectionColour=#2d3680;
+	set branchLabels.colorAttribute="User selection";
+	set branchLabels.displayAttribute="label";
+	set branchLabels.fontName="sansserif";
+	set branchLabels.fontSize=14;
+	set branchLabels.fontStyle=0;
+	set branchLabels.isShown=true;
+	set branchLabels.significantDigits=4;
+	set layout.expansion=0;
+	set layout.layoutType="RECTILINEAR";
+	set layout.zoom=0;
+	set legend.attribute="label";
+	set legend.fontSize=10.0;
+	set legend.isShown=false;
+	set legend.significantDigits=4;
+	set nodeBars.barWidth=4.0;
+	set nodeBars.displayAttribute=null;
+	set nodeBars.isShown=false;
+	set nodeLabels.colorAttribute="User selection";
+	set nodeLabels.displayAttribute="label";
+	set nodeLabels.fontName="sansserif";
+	set nodeLabels.fontSize=8;
+	set nodeLabels.fontStyle=0;
+	set nodeLabels.isShown=false;
+	set nodeLabels.significantDigits=4;
+	set nodeShapeExternal.colourAttribute="User selection";
+	set nodeShapeExternal.isShown=false;
+	set nodeShapeExternal.minSize=10.0;
+	set nodeShapeExternal.scaleType=Width;
+	set nodeShapeExternal.shapeType=Circle;
+	set nodeShapeExternal.size=4.0;
+	set nodeShapeExternal.sizeAttribute="Fixed";
+	set nodeShapeInternal.colourAttribute="User selection";
+	set nodeShapeInternal.isShown=false;
+	set nodeShapeInternal.minSize=10.0;
+	set nodeShapeInternal.scaleType=Width;
+	set nodeShapeInternal.shapeType=Circle;
+	set nodeShapeInternal.size=4.0;
+	set nodeShapeInternal.sizeAttribute="Fixed";
+	set polarLayout.alignTipLabels=false;
+	set polarLayout.angularRange=0;
+	set polarLayout.rootAngle=0;
+	set polarLayout.rootLength=100;
+	set polarLayout.showRoot=true;
+	set radialLayout.spread=0.0;
+	set rectilinearLayout.alignTipLabels=true;
+	set rectilinearLayout.curvature=0;
+	set rectilinearLayout.rootLength=100;
+	set scale.offsetAge=0.0;
+	set scale.rootAge=1.0;
+	set scale.scaleFactor=1.0;
+	set scale.scaleRoot=false;
+	set scaleAxis.automaticScale=true;
+	set scaleAxis.fontSize=8.0;
+	set scaleAxis.isShown=false;
+	set scaleAxis.lineWidth=1.0;
+	set scaleAxis.majorTicks=1.0;
+	set scaleAxis.minorTicks=0.5;
+	set scaleAxis.origin=0.0;
+	set scaleAxis.reverseAxis=false;
+	set scaleAxis.showGrid=true;
+	set scaleBar.automaticScale=true;
+	set scaleBar.fontSize=10.0;
+	set scaleBar.isShown=true;
+	set scaleBar.lineWidth=1.0;
+	set scaleBar.scaleRange=0.0;
+	set tipLabels.colorAttribute="User selection";
+	set tipLabels.displayAttribute="Names";
+	set tipLabels.fontName="sansserif";
+	set tipLabels.fontSize=4;
+	set tipLabels.fontStyle=0;
+	set tipLabels.isShown=true;
+	set tipLabels.significantDigits=4;
+	set trees.order=true;
+	set trees.orderType="increasing";
+	set trees.rooting=true;
+	set trees.rootingType="User Selection";
+	set trees.transform=true;
+	set trees.transformType="proportional";
+end;
+

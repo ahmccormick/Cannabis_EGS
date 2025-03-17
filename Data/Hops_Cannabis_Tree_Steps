@@ -1,0 +1,77 @@
+##########################
+# LOCALLY IN CONDA
+##########################
+conda create -n bioinfo_env bwa bcftools bedtools samtools mafft -c bioconda -c conda-forge
+source activate bioinfo_env
+
+#already ran prior
+#samtools faidx GCA_963169125.1_drHumLupu1.1_genomic.fna OY720647.1 OY720648.1 OY720649.1 OY720651.1 OY720652.1 OY720653.1 OY720654.1 OY720655.1 OY720656.1 OY720650.1 > hops_main_chromosomes.fna
+#samtools faidx GCF_900626175.2_cs10_genomic.fna NC_044371.1 NC_044375.1 NC_044372.1 NC_044373.1 NC_044374.1 NC_044377.1 NC_044378.1 NC_044379.1 NC_044376.1 NC_044370.1 > cannabis_main_chromosomes.fna
+#samtools faidx hops_main_chromosomes.fna
+#samtools faidx cannabis_main_chromosomes.fna
+
+#Extracting SNP info from the no missingness VCF file
+bcftools query -f '%CHROM\t%POS\t%REF\t%ALT[\t%GT]\n' filtered_no_missing.vcf.gz > cannabis_snps_genotypes.txt
+bcftools query -l filtered_no_missing.vcf.gz > sample_names.txt
+
+#########################
+# Extract hops snps sequences in fasta format
+#mapping file is matching the cannabis chr numbers to the hops numbers
+awk 'NR==FNR {map[$1]=$2; next} {if ($1 in map) print map[$1], $2, $3}' mapping_file.txt hops_snp_positions.bed > hops_snp_positions_mapped.bed
+
+awk '{$1=$1}1' OFS="\t" hops_snp_positions_mapped.bed > hops_snp_positions_fixed.bed
+
+#extract hops SNPs based on the bed file info
+bedtools getfasta -fi hops_main_chromosomes.fna -bed hops_snp_positions_fixed.bed -fo hops_snps.fasta
+
+grep -v "^>" hops_snps_final_cleaned.fasta > hops_snps_no_headers.txt
+tr -d '\n' < hops_snps_no_headers.txt > hops_snps_combined_letters.txt
+
+cat hops_snps_combined_letters.txt >> hops_snps_combined_letters.fasta
+#do this if using/need for fasta below)
+#then merge this into the cannabis fasta above
+#########################
+#make a tab delimited file (save from excel) if need to rename the >samplesIDs and use for below to add in
+awk 'NR==FNR {map[$1] = $2; next} /^>/ {sub(/^>/, "", $1); if ($1 in map) $1 = ">" map[$1]; else $1 = ">" $1} 1' sample_mapping.txt cannabis_snps.fasta > cannabis_snps_updated.fasta
+#########################
+
+
+#########################
+#Cannabis .vcf to FASTA format using VCF2PHYLIP
+#########################
+bcftools view -i 'AC>0' filtered_no_missing.vcf -Oz -o filtered_variants.vcf
+bcftools stats filtered_variants.vcf | grep "number of SNPs"
+
+#convert to fasta
+python ~/Desktop/Programs/edgardomortiz-vcf2phylip-cf19de1/vcf2phylip.py -i filtered_variants.vcf -m 1
+
+#NOTES
+#If use bcftools for this then the heterozygous sites - a single allele is chosen at random from the two available REF/ALT
+#0/0 REF/REF
+#1/1 ALT/ALT
+#0/1 REF/ALT
+
+#########################
+#M10
+#########################
+#ran the below command and it gave this
+iqtree2 -s filtered_variants.min4.phy --seqtype DNA -m MFP+ASC -bb 1000 -nt AUTO
+
+
+#ERROR: For your convenience alignment with variable sites printed to filtered_variants.min4.phy.varsites.phy
+#ERROR: Invalid use of +ASC because of 18 invariant sites in the alignment
+#Alignment was printed to filtered_variants.min4.phy.varsites.phy
+
+#this got rid of the invariant sites and that file was progressed in the below step
+
+#########################
+#M12
+#########################
+#took the above printed file "filtered_variants.min4.phy.varsites.phy" - and ran the below (tree #12)
+
+source activate iqtree2_env
+iqtree2 -s filtered_variants.min4.phy.varsites.phy --seqtype DNA -m MFP+ASC -bb 3000 -bnni -nt AUTO
+
+########################
+#then with .contree file have to move back to R studio to add in correct leaf full names as just SRR numbers in the contreefile
+#get - tree_12_processed.contree file
