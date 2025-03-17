@@ -11,7 +11,7 @@ Scripts used for .vcf generation are located in the Scripts folder
 
 # EGS Pipeline 
 
-Inputs needed: .vcf file with your genotype information and lat/long data for your samples in a .csv
+Inputs needed: .vcf file with your genotype information and lat/long data for your samples in a .csv.
 The below steps detail the pipeline that was conducted on the Ren et al., 2021 dataset (PRJNA734114).
 
 1. Identification of core (1_core_identification.py)
