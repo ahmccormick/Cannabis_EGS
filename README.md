@@ -12,7 +12,7 @@ Scripts used for .vcf generation are located in the Scripts folder
 # EGS Pipeline 
 
 Inputs needed: .vcf file with your genotype information and lat/long data for your samples in a .csv.
-The below steps detail the pipeline that was conducted on the Ren et al., 2021 dataset (PRJNA734114). This was similarly repeated on the fusion of the Ren et al., 2021 and Soorni et al., 2017 datasets. 
+The below steps detail the pipeline that was conducted on the Ren et al., 2021 dataset (PRJNA734114). This was similarly repeated on the fusion of the Ren et al., 2021 and Soorni et al., 2017 datasets in this manuscript.  
 
 1. Identification of core (1_core_identification.py)
    This script was used on the generated vcf file (Cannabis_sativa_PRJNA734114_filtered.vcf.gz) in PyCharm to identify a core (change accordingly for 30% of your dataset)
