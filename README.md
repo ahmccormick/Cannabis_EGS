@@ -33,9 +33,6 @@ The below steps detail the pipeline that was conducted on the Ren et al., 2021 d
    In R studio with the script 5_Genomic_Selection.R
 
 R versions used in this work included 4.1.2 and 4.4.0
-   
- 
-
-   Figures for the manuscript can be found in the Data folder under Cannabis_EGS_Figures_manuscript.R 
+Figures made in R for this manuscript can be found in the Data folder under Cannabis_EGS_Figures_manuscript.R 
 
 
