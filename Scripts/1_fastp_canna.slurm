@@ -23,4 +23,4 @@ module load fastp/0.23.4
 # Check if fastp is available
 which fastp
 
-fastp -w  4 -i $INPUT1 -I $INPUT2 -o /home/ahmccorm/scratch/Cannabis/trimmed_fastq/$OUTPUT1\_trimmed.fastq.gz -O /home/ahmccorm/scratch/Soybean/trimmed_fastq/$OUTPUT2\_trimmed.fastq.gz
+fastp -w  4 -i $INPUT1 -I $INPUT2 -o /home/ahmccorm/scratch/Cannabis/trimmed_fastq/$OUTPUT1\_trimmed.fastq.gz -O /home/ahmccorm/scratch/Cannabis/trimmed_fastq/$OUTPUT2\_trimmed.fastq.gz
