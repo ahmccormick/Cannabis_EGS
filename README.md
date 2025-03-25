@@ -31,6 +31,8 @@ The below steps detail the pipeline that was conducted on the Ren et al., 2021 d
    
 5. Genomic selection with rrBLUP
    In R studio with the script 5_Genomic_Selection.R
+
+R versions used in this work included 4.1.2 and 4.4.0
    
  
 
