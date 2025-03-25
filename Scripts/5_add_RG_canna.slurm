@@ -3,7 +3,7 @@
 #SBATCH --time=0-6:00
 #SBATCH --cpus-per-task=4
 #SBATCH --mem-per-cpu=2G
-#SBATCH --account=def-yeaman
+#SBATCH --account=X
 #SBATCH --array=1-82
 #SBATCH --mail-user ahmccorm@hawaii.edu # email wish to be notified at
 #SBATCH --mail-type ALL #events for email. ALL will alert you of job beginning/completion/failure
