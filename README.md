@@ -2,7 +2,7 @@
 
 This repository provides the supporting data for a recently submitted manuscript entitled "Dissecting Genotype-Environment interactions with functional implications for parental selection in Cannabis Breeding"
 
-A pre-print of this work can be found at: (to follow shortly)
+A pre-print of this work can be found at: https://www.biorxiv.org/content/10.1101/2025.04.17.649228v1
 
 High resolution verions of main and supplemental figures will be available on fig share https://figshare.com/authors/Anna_H_McCormick/17741367
 
